@@ -25,3 +25,9 @@ fig.gca().add_artist(central_circle)
 plt.rc('font', size=12)
 plt.title("Amazon Alexa Reviews", fontsize=20)
 plt.show()
+
+sentiments = SentimentIntensityAnalyzer()
+data["Positive"] = [sentiments.polarity_scores(i)["pos"] for i in data["verified_reviews"]]
+data["Negative"] = [sentiments.polarity_scores(i)["neg"] for i in data["verified_reviews"]]
+data["Neutral"] = [sentiments.polarity_scores(i)["neu"] for i in data["verified_reviews"]]
+print(data.head())
