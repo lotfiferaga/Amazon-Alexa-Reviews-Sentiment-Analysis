@@ -31,3 +31,16 @@ data["Positive"] = [sentiments.polarity_scores(i)["pos"] for i in data["verified
 data["Negative"] = [sentiments.polarity_scores(i)["neg"] for i in data["verified_reviews"]]
 data["Neutral"] = [sentiments.polarity_scores(i)["neu"] for i in data["verified_reviews"]]
 print(data.head())
+
+x = sum(data["Positive"])
+y = sum(data["Negative"])
+z = sum(data["Neutral"])
+
+def sentiment_score(a, b, c):
+    if (a>b) and (a>c):
+        print("Positive 😊 ")
+    elif (b>a) and (b>c):
+        print("Negative 😠 ")
+    else:
+        print("Neutral 🙂 ")
+sentiment_score(x, y, z)
