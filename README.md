@@ -1,6 +1,6 @@
 # Amazon Alexa Reviews Sentiment Analysis
 
-## Overview
+## Overview of the project
 
 The "Amazon Alexa Reviews Sentiment Analysis" project aims to analyze sentiment from customer reviews of Amazon Alexa products using Natural Language Processing (NLP) techniques. The project involves collecting a dataset of reviews from various sources, preprocessing the text data, applying sentiment analysis algorithms, and visualizing the results to gain insights into customer sentiment towards Amazon Alexa devices.
 
